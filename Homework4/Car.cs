@@ -56,16 +56,8 @@ public class Car
     }
 
     // Task4 ( task 10 ) Overload operator == for the class Car (cars - equal if the name and price are equal)
-    public static bool operator == (Car first, Car second)
-    {
-        return first.name == second.name && first.price == second.price;
-    }
-
-    // Необходимо переопределять их в паре 
-    public static bool operator !=(Car first, Car second)
-    {
-        return !(first == second);
-    }
+    public static bool operator == (Car first, Car second) => first.name == second.name && first.price == second.price; 
+    public static bool operator !=(Car first, Car second) => !(first == second);
 
 
     // Task4 ( 11 task ) Override method ToString()  in the class Car, which returns a line with data about cars

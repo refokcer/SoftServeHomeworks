@@ -4,6 +4,11 @@ internal static class Program
 {
     public static void Main(string[] args)
     {
+        // Task4();
+        Homework();
+    }
+
+    private static void Task4(){
         // Task4 ( task 7 ) Enter data about 3 cars.
         var cars = new Car[3];
 
@@ -36,5 +41,10 @@ internal static class Program
         }
         
         if(check) Console.WriteLine("There were no white cars");
+    }
+
+    private static void Homework()
+    {
+        var person = Person.Input();
     }
 }
