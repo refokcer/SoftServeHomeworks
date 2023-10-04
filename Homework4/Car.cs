@@ -12,7 +12,7 @@ public class Car
     public string Color
     {
         get => color; // возвращаем значение свойства
-        set => color = value; // устанавливаем новое значение свойства
+        set => color = value.ToLower(); // устанавливаем новое значение свойства
     }
 
     // Task4 ( 2 task ) Create two constructors - default and with parameters.
@@ -27,7 +27,7 @@ public class Car
     public Car(string name, string color, decimal price)
     {
         this.name = name;
-        this.color = color;
+        this.color = color.ToLower();
         this.price = price;
     }
 
@@ -35,7 +35,7 @@ public class Car
     public static Car Input()
     {
         var name = MyUtilite.EnterValue<string>("Enter the name of the Car:");
-        var color = MyUtilite.EnterValue<string>("Enter the color of the Car");
+        var color = MyUtilite.EnterValue<string>("Enter the color of the Car").ToLower();
         var price = MyUtilite.EnterValue<decimal>("Enter the price of the Car:");
 
         return new Car(name, color, price);
@@ -46,7 +46,7 @@ public class Car
     {
         Console.WriteLine($"Last price: {price}");
         price -= price * (decimal)x / 100;
-        Console.WriteLine($"New price: {price}");
+        Console.WriteLine($"New price: {price}\n");
     }
 
     // Task4 ( task 5 ) Print () - to output data about cars on the console
@@ -71,6 +71,7 @@ public class Car
     // Task4 ( 11 task ) Override method ToString()  in the class Car, which returns a line with data about cars
     public override string ToString()
     {
-        return $"Name: {name}, Color: {color}, Price: {price}, Company: {CompanyName}";
+        return "Info about car:\n" +
+               $"Name: {name}, Color: {color}, Price: {price}, Company: {CompanyName}\n";
     }
 }
