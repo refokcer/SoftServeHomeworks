@@ -4,7 +4,7 @@ internal static class Program
 {
     public static void Main(string[] args)
     {
-        // Task4();
+        Task4();
         Homework();
     }
 
@@ -45,6 +45,52 @@ internal static class Program
 
     private static void Homework()
     {
-        var person = Person.Input();
+        // Homework 4 ( task 1 ) In the method Main() create 6 objects of Person type and enter information about them.
+        var persons = new Person[6];
+        
+        persons[0] = new Person();
+        persons[1] = new Person("Kyril", new DateTime(2018, 4, 5));
+        
+        Console.WriteLine("Info about 1 and 2 Person already exist");
+        for (var i = 2; i < 6; i++)
+        {
+            Console.WriteLine($"Enter info about {i+1} Person:");
+            persons[i] = Person.Input();
+        }
+
+        // Homework 4 ( task 2 ) Then calculate and output on the console name and Age of each person; 
+        foreach (var person in persons)
+        {
+            Console.WriteLine(person.Name);
+            person.Age(true);
+        }
+        
+        // Homework 4 ( task 3 ) Change the name of persons, which Age is less then 16, to "Very Young".
+        foreach (var person in persons)
+        {
+            if (person.Age() < 16)
+                person.ChangeName("Very Young");
+        }
+        
+        // Homework 4 ( task 4 ) Output information about all persons on the console.
+        for(var i = 0; i < 6; i++)
+        {
+            Console.WriteLine($"Info about {i+1} person:");
+            persons[i].Output();
+        }
+
+        // Homework 4 ( task 5 ) Find and output information about Persons with the same names (use ==).
+        for (var i = 0; i < 5; i++)
+        {
+            for (var j = i+1; j < 6; j++)
+            {
+                if (persons[i] == persons[j])
+                {
+                    Console.WriteLine("Two people matched\n" +
+                                      $"First:\n{persons[i]}\n" +
+                                      $"Second:\n{persons[j]}\n");
+                }
+            }
+        }
     }
 }
