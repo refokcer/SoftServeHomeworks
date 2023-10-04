@@ -28,6 +28,7 @@ public class Person
     {
         _name = name;
         _birthDate = birthDate < DateTime.Today ? birthDate : DateTime.Today;
+        Console.WriteLine("You enter impossible date. It's been changed to today's date");
     }
 
     
