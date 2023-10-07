@@ -1,4 +1,6 @@
-namespace Homework4;
+using System.Collections;
+
+namespace Homework5;
 
 public static class MyUtilite
 {
@@ -38,5 +40,18 @@ public static class MyUtilite
     }
 
     // Делегат для дополнительного условия
-    public delegate bool IsTrue<in T>(T x);
+    private delegate bool IsTrue<in T>(T x);
+    
+    // Output any collections
+    public static void Output(IEnumerable list, string? message = null)
+    {
+        if (message != null ) Console.WriteLine(message);
+
+        foreach (var item in list)
+        {
+            Console.Write($"{item} ");
+        }
+        
+        Console.WriteLine();
+    }
 }

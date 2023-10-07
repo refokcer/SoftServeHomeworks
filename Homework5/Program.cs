@@ -4,6 +4,16 @@ internal static class Program
 {
     public static void Main(string[] args)
     {
-        Console.Read();
+        Console.WriteLine("Task5_1");
+        Task5_1.Execute();
+        
+        Console.WriteLine("Task5_2 with using list");
+        Task5_2_List.Execute();
+        
+        Console.WriteLine("Task5_2 with using ArrayList");
+        Task5_2_ArrayList.Execute();
+        
+        Console.WriteLine("Task5_3");
+        Task5_3.Execute();
     }
 }
