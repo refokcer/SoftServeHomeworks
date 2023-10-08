@@ -34,6 +34,6 @@ public static class Homework5_1
         listOfDevelopers.Sort();
         
         // Output list
-        // MyUtilite.Output(list);
+        MyUtilite.Output(listOfDevelopers);
     }
 }

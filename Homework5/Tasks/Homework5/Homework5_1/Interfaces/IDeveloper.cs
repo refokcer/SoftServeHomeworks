@@ -1,8 +1,8 @@
 namespace Homework5.Tasks.Homework5.Homework5_1.Interfaces;
 
-public interface IDeveloper
+public interface IDeveloper : IComparable<IDeveloper>
 {
-    private string Tool
+    public string Tool
     {
         get => Tool;
         set => Tool = value;
@@ -11,4 +11,12 @@ public interface IDeveloper
     // Methods
     public void Create();
     public void Destroy();
+    
+    // Сравниваем интерфейсы по предмету
+    int IComparable<IDeveloper>.CompareTo(IDeveloper? other)
+    {
+        if (ReferenceEquals(this, other)) return 0;
+        if (ReferenceEquals(null, other)) return 1;
+        return string.Compare(Tool, other.Tool, StringComparison.Ordinal);
+    }
 }

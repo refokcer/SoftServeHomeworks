@@ -4,7 +4,7 @@ namespace Homework5.Tasks.Homework5.Homework5_1.Classes;
 
 public class Programmer : IDeveloper
 {
-    private string Tool { get; set; }
+    public string Tool { get; set; }
     private string Language { get; set; }
     
     // Constructors
@@ -26,5 +26,5 @@ public class Programmer : IDeveloper
     public void Destroy() => Console.WriteLine("The programmer destroying Data Base");
     
     // Для удобного вывода
-    public override string ToString() => $"The tool of this Programmer is {Tool} and language is {Language}";
+    public override string ToString() => $"The tool of this Programmer is {Tool} and language is {Language}\n";
 }

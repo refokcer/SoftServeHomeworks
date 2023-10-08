@@ -6,7 +6,7 @@ public static class MyUtilite
 {
     // Проверка на корректность ввода данных ( что бы ввели нужный тип данных )
     // + дополнительная проверка условия ( при необходимости )  при вводе
-    private static T EnterValue<T>(in string text, IsTrue<T> func)
+    public static T EnterValue<T>(in string text, IsTrue<T> func, in string error = "Error. Please try again.")
     {
         while (true)
         {
@@ -20,10 +20,9 @@ public static class MyUtilite
                 var check = (T)Convert.ChangeType(Console.ReadLine(), typeof(T))!;
 
                 // Проверка дополнительного условия
-                if (!func(check)) continue;
+                if (func(check)) return check;
                 
-                // Возвращаем ввод если все коректно
-                return check;
+                Console.WriteLine(error);
             }
             catch (Exception)
             {
@@ -40,7 +39,7 @@ public static class MyUtilite
     }
 
     // Делегат для дополнительного условия
-    private delegate bool IsTrue<in T>(T x);
+    public delegate bool IsTrue<in T>(T x);
     
     // Output any collections
     public static void Output(IEnumerable list, string? message = null)

@@ -4,7 +4,7 @@ namespace Homework5.Tasks.Homework5.Homework5_1.Classes;
 
 public class Builder : IDeveloper
 {
-    private string Tool { get; set; }
+    public string Tool { get; set; }
 
     // Constructors
     public Builder()
@@ -24,5 +24,5 @@ public class Builder : IDeveloper
     public void Destroy() => Console.WriteLine("The builder destroying house");
 
     // Для удобного вывода
-    public override string ToString() => $"The tool of this Builder is {Tool}";
+    public override string ToString() => $"The tool of this Builder is {Tool}\n";
 }
