@@ -31,12 +31,10 @@ public static class Task5_3
         foreach (var item in list)
         {
             // Проверяем на то что бы это был не мобильный телефон
-            if (item.GetType() != typeof(RadioPhone)) continue;
-            
-            // Делаем DownCast и проверяем наличие автоответчика
-            var radioPhone = (RadioPhone)item;
-            if (radioPhone.IsAutoresponder)
+            if (item is RadioPhone { IsAutoresponder: true } radioPhone)
                 Console.WriteLine($"Radiophone with name {radioPhone.Name} have autoresponder");
+            // else
+            //     Console.WriteLine("This is mobile phone");
         }
     }
 }
