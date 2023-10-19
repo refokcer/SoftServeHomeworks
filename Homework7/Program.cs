@@ -10,7 +10,16 @@ internal static class Program
         // Console.WriteLine("Task7_1:");
         // Task7_1.Execute();
         
-        Console.WriteLine("Task7_2:");
-        Task7_2.Execute();
+        // Console.WriteLine("Task7_2:");
+        // Task7_2.Execute();
+        
+        Console.WriteLine("Task7_3:");
+        Task7_3.Execute();
+        
+        // Console.WriteLine("Task7_2:");
+        // Task7_2.Execute();
+        
+        // Console.WriteLine("Task7_2:");
+        // Task7_2.Execute();
     }
 }

@@ -8,21 +8,20 @@ public static class Task7_2
     {
         //Write file path
         const string pathWrite = @"C:\Programming\SoftServe\Files\DirectoryC.txt";
-        
-        // Variable for line-by-line reading from file
-        var text = new StringBuilder();
-        
+
         try 
         {
             using (var sw = new StreamWriter(pathWrite))   
             {
                 // Get all directories and files from E drive
-                string[] files = Directory.GetFiles(@"E:\", "*.*", SearchOption.AllDirectories);
-                string[] dirs = Directory.GetDirectories(@"E:\", "*.*", SearchOption.AllDirectories);
+                string[] files = Directory.GetFiles(@"E:\", "*.*");
+                string[] dirs = Directory.GetDirectories(@"E:\", "*.*");
 
                 // Write directory info to file
                 foreach (string dir in dirs)
                 {
+                    if(dir == @"E:\System Volume Information") continue;
+                    
                     var di = new DirectoryInfo(dir);
                     sw.WriteLine($"{di.Name},Directory,{DirSize(di)}");  
                 }
