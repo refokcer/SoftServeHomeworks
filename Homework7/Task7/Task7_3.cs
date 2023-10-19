@@ -6,8 +6,10 @@ public static class Task7_3
     {
         try  
         {
+            // Files from disc E
             string[] txtFiles = Directory.GetFiles(@"E:\", "*.txt");
             
+            // Read files and output all text from them
             foreach(string file in txtFiles) 
             {
                 string text = File.ReadAllText(file);
@@ -16,6 +18,7 @@ public static class Task7_3
         }  
         catch (Exception ex)
         {
+            // Catch exception
             Console.WriteLine(ex.Message);
         }
     }
