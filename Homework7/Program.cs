@@ -2,7 +2,6 @@
 
 namespace Homework7;
 
-
 internal static class Program
 {
     public static void Main(string[] args)
