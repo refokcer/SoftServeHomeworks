@@ -1,4 +1,3 @@
-using Homework7;
 using Homework8.Task8.Classes;
 
 namespace Homework8.Task8;

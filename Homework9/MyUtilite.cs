@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Homework8;
+namespace Homework9;
 
 public static class MyUtilite
 {
