@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftServeHomeworks", "SoftServeHomeworks\SoftServeHomeworks.csproj", "{25B2E5CF-A97E-420F-B609-548F8BE9CDEC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework1", "Homework1\Homework1.csproj", "{988FFF7C-EF12-4D32-AD09-D58A828F82D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework2", "Homework2\Homework2.csproj", "{628F3C56-E717-4BF5-937C-F900FF06A9E1}"
@@ -28,10 +26,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{25B2E5CF-A97E-420F-B609-548F8BE9CDEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25B2E5CF-A97E-420F-B609-548F8BE9CDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25B2E5CF-A97E-420F-B609-548F8BE9CDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25B2E5CF-A97E-420F-B609-548F8BE9CDEC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{988FFF7C-EF12-4D32-AD09-D58A828F82D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{988FFF7C-EF12-4D32-AD09-D58A828F82D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{988FFF7C-EF12-4D32-AD09-D58A828F82D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
