@@ -9,7 +9,7 @@ internal static class Program
         Console.WriteLine("Task 9:");
         Task9_1.Execute();
         
-        // Console.WriteLine("Homework 9::");
-        // Homework9.Homework9.Execute();
+        Console.WriteLine("Homework 9::");
+        Homework9.Homework9_A.Execute();
     }
 }
