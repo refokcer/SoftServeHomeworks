@@ -4,6 +4,7 @@ public static class Homework10_1
 {
     public static void Execute()
     {
+        // Create points
         var a = new Point(10, 15);
         var b = new Point(-5, 45);
         var c = new Point(0, 5);
@@ -18,6 +19,7 @@ public static class Homework10_1
             new Triangle(d, e ,b)
         };
 
+        // Call print
         foreach (var item in list)
             item.Print();
         
@@ -25,6 +27,7 @@ public static class Homework10_1
         var minDist = list[0].Points[0].Distance(new Point(0, 0));
         var ans = 0;
         
+        // Check all points
         for (var i = 0; i < 3; i++)
         {
             var points = list[i].Points;
@@ -37,6 +40,7 @@ public static class Homework10_1
             }
         }
         
+        // Output answer
         Console.WriteLine($"The {ans+1} triangle has the closest point to (0, 0) with distance {minDist}");
         
     }

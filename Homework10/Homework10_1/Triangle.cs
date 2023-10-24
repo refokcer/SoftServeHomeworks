@@ -19,14 +19,17 @@ public class Triangle
         _bc = Points[1].Distance(Points[2]);
     }
 
+    // Perimeter
     public double Perimeter() => _ab + _ac + _bc;
 
+    // Area of triangle
     public double Square()
     {
         //  S = √p · (p — a)(p — b)(p — c)
         var p = Perimeter() / 2;
         return Math.Sqrt(p * (p - _ab) * (p - _ac) * (p - _bc));
     }
-
+    
+    // Output info
     public void Print() => Console.WriteLine($"Triangle: Perimeter: {Perimeter()}, Square: {Square()}");
 }
